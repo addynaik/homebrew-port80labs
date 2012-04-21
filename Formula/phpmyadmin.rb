@@ -2,14 +2,15 @@ require 'formula'
 
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
-  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.4.10.1/phpMyAdmin-3.4.10.1-all-languages.tar.bz2'
-  md5 '9eed98427c27685d665630b1aded1d85'
-  version '3.4.10.1'
+  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.0/phpMyAdmin-3.5.0-english.tar.bz2'
+  md5 '53f6d3d3ce2d5685d724bfe5ba7cc5b1'
+  version '3.5.0'
 
   depends_on 'mcrypt-php'
 
   def install
     (share+'phpmyadmin').install Dir['*']
+    quiet_system 'ln', '-s', (HOMEBREW_CELLAR+@name+"config.inc.php"), share+'phpmyadmin'
   end
 
   def caveats; <<-EOS.undent
