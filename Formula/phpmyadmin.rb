@@ -2,9 +2,9 @@ require 'formula'
 
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
-  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.1/phpMyAdmin-3.5.1-english.tar.bz2'
-  md5 '43ea5540f9e36f39823186119bef2f31'
-  version '3.5.1'
+  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.2/phpMyAdmin-3.5.2-english.tar.bz2'
+  md5 'd123a4ea650e243351f26bafbd171023'
+  version '3.5.2'
 
   depends_on 'mcrypt-php'
 
