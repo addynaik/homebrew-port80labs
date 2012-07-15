@@ -1,12 +1,21 @@
 require 'formula'
 
+def php54_installed?
+  `php -v`.match(/5\.4\./)
+end
+
+def php53_installed?
+  `php -v`.match(/5\.3\./)
+end
+
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
   url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.2/phpMyAdmin-3.5.2-english.tar.bz2'
   md5 'd123a4ea650e243351f26bafbd171023'
   version '3.5.2'
 
-  depends_on 'mcrypt-php'
+  depends_on 'josegonzalez/php/php53-mcrypt' if php53_installed?
+  depends_on 'josegonzalez/php/php54-mcrypt' if php54_installed?
 
   def install
     (share+'phpmyadmin').install Dir['*']
