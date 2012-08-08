@@ -10,7 +10,7 @@ end
 
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
-  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.2/phpMyAdmin-3.5.2.1-english.tar.bz2'
+  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.2.1/phpMyAdmin-3.5.2.1-english.tar.bz2'
   md5 '7346769c5f7732f426755b0a2f9e9835'
   version '3.5.2.1'
 
